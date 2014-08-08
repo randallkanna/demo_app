@@ -1,8 +1,8 @@
 class StatusesController < ApplicationController
+  before_filter :authenticate_user!, only: [:new, :create, :edit, :update]
 
-  before_filter :authenticate_user!, only: [:new]
-
-
+  # GET /statuses
+  # GET /statuses.json
   def index
     @statuses = Status.all
 
@@ -12,7 +12,8 @@ class StatusesController < ApplicationController
     end
   end
 
-
+  # GET /statuses/1
+  # GET /statuses/1.json
   def show
     @status = Status.find(params[:id])
 
@@ -22,7 +23,8 @@ class StatusesController < ApplicationController
     end
   end
 
-
+  # GET /statuses/new
+  # GET /statuses/new.json
   def new
     @status = Status.new
 
@@ -32,11 +34,13 @@ class StatusesController < ApplicationController
     end
   end
 
+  # GET /statuses/1/edit
   def edit
     @status = Status.find(params[:id])
   end
 
- 
+  # POST /statuses
+  # POST /statuses.json
   def create
     @status = Status.new(params[:status])
 
@@ -51,7 +55,8 @@ class StatusesController < ApplicationController
     end
   end
 
-
+  # PUT /statuses/1
+  # PUT /statuses/1.json
   def update
     @status = Status.find(params[:id])
 
@@ -66,8 +71,8 @@ class StatusesController < ApplicationController
     end
   end
 
-
-
+  # DELETE /statuses/1
+  # DELETE /statuses/1.json
   def destroy
     @status = Status.find(params[:id])
     @status.destroy
@@ -78,3 +83,4 @@ class StatusesController < ApplicationController
     end
   end
 end
+

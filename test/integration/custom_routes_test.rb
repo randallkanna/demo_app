@@ -19,3 +19,4 @@ class CustomRoutesTest < ActionDispatch::IntegrationTest
 	end
 
 end
+ 
