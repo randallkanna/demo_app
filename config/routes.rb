@@ -14,5 +14,6 @@ Treebook::Application.routes.draw do
 
   end
 
+  get '/:id', to: 'profiles#show'
 
 end
