@@ -1,3 +1,3 @@
 This is a basic Ruby on Rails application that I created following along a simple tutorial. Users can register as a user, login to their accounts, and post a status for all users to see. User icons are pulled using gravatar. I also used a twitter bootstrap. 
 
-Check out my blog at RandallKanna.com
+Check out my blog at RandallKanna.com and see the demo app at randallkannademoapp.heroku.com
